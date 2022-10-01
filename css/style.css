@@ -449,8 +449,6 @@ body {
   .cursos__right {
     grid-template-columns: 1fr;
   }
-  .producto {
-  }
   .list__icon {
     width: 2.5em;
     height: 2.5em;
