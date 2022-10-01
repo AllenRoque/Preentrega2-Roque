@@ -37,15 +37,12 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link text-color" href="../index.html">Inicio</a>
-              <a class="nav-link text-color" href="../paginas/productos.html">Productos</a>
-              <a
-                class="nav-link active text-color"
-                aria-current="page"
-                href="../paginas/cursos.html"
-                >Cursos</a
-              >
-              <a class="nav-link text-color" href="../paginas/novedades.html">Novedades</a>
-              <a class="nav-link text-color" href="../paginas/contacto.html">Contacto</a>
+              <a class="nav-link text-color" href="./productos.html">Productos</a>
+              <a class="nav-link active text-color" href="./cursos.html">Cursos</a>
+              <a class="nav-link text-color" aria-current="page" href="./novedades.html">
+                Novedades
+              </a>
+              <a class="nav-link text-color" href="./contacto.html">Contacto</a>
             </div>
           </div>
         </div>
@@ -57,8 +54,11 @@
       <section class="cursos__left">
         <ul class="cursos__list">
           <li><a class="cursos__item" href="#">Cursos Básicos</a></li>
+          <hr />
           <li><a class="cursos__item" href="#">Cursos Intermedios</a></li>
+          <hr />
           <li><a class="cursos__item" href="#">Cursos especializados</a></li>
+          <hr />
           <li><a class="cursos__item" href="#">Todos los cursos</a></li>
         </ul>
       </section>
@@ -70,7 +70,7 @@
             alt="imagen de persona amasando masa para pizza "
           />
           <figcaption class="cursos__title">Curso de pizzas</figcaption>
-          <a href="#"><p class="cursos__text">Más info >></p></a>
+          <form action=""><input class="cursos__button" type="submit" value="Más info" /></form>
         </figure>
         <figure class="cursos__box">
           <img
@@ -79,7 +79,7 @@
             alt="imagen de bocaditos recien salidos del horno"
           />
           <figcaption class="cursos__title">Curso de bocaditos</figcaption>
-          <a href="#"><p class="cursos__text">Más info >></p></a>
+          <form action=""><input class="cursos__button" type="submit" value="Más info" /></form>
         </figure>
         <figure class="cursos__box">
           <img
@@ -88,7 +88,7 @@
             alt="imagen de manos decorando un pastel"
           />
           <figcaption class="cursos__title">Decoracion de tortas</figcaption>
-          <a href="#"><p class="cursos__text">Más info >></p></a>
+          <form action=""><input class="cursos__button" type="submit" value="Más info" /></form>
         </figure>
         <figure class="cursos__box">
           <img
@@ -97,7 +97,7 @@
             alt="imagen con ingredientes para realizar pasteles"
           />
           <figcaption class="cursos__title">Presupuestos en la panadería</figcaption>
-          <a href="#"><p class="cursos__text">Más info >></p></a>
+          <form action=""><input class="cursos__button" type="submit" value="Más info" /></form>
         </figure>
         <figure class="cursos__box">
           <img
@@ -106,7 +106,7 @@
             alt="imagen de manos amasando pan"
           />
           <figcaption class="cursos__title">Curso de panes hechos a mano</figcaption>
-          <a href="#"><p class="cursos__text">Más info >></p></a>
+          <form action=""><input class="cursos__button" type="submit" value="Más info" /></form>
         </figure>
         <figure class="cursos__box">
           <img
@@ -115,7 +115,7 @@
             alt="imagen de persona lanzando harina a un pan"
           />
           <figcaption class="cursos__title">Curso de estetica de panes</figcaption>
-          <a href="#"><p class="cursos__text">Más info >></p></a>
+          <form action=""><input class="cursos__button" type="submit" value="Más info" /></form>
         </figure>
       </section>
     </main>
@@ -143,12 +143,12 @@
         <a href="#"
           ><img
             class="footer__libro"
-            src="../multimedia/libro.png"
+            src="/multimedia/libro.png"
             alt="Imagen de libro de Reclamaciones"
         /></a>
       </div>
       <div class="box">
-        <h3 class="footer__list--link">Redes Sociales</h3>
+        <p class="footer__list--link">Redes Sociales</p>
         <ul class="list">
           <li class="list__icon">
             <a class="icon" href="#"><i class="fab fa-facebook-f"></i></a>

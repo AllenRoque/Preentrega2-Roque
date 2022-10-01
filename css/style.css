@@ -18,7 +18,10 @@ body {
 .logo {
   height: 80px;
 }
-
+.logo:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
 .navbar-light .navbar-nav .nav-link.active {
   color: #7c2806;
 }
@@ -82,31 +85,28 @@ body {
 }
 
 .producto {
-  border: 0.06em solid #7d2a0c;
+  border: 1px solid #7d2a0c;
   border-radius: 1em;
-  margin: 2em;
-  height: 20em;
+  max-width: 20em;
 }
 
 .producto__image {
-  width: 18em;
+  width: 100%;
   height: 15em;
   border-radius: 1em 1em 0 0;
 }
 
 .producto__name {
   display: block;
-  margin: 1em;
+  margin: 1em 1em 0;
   font-size: 1.1rem;
   font-weight: bold;
   color: #7d2a0c;
 }
 
 .producto__price {
-  display: block;
   text-align: right;
-  margin: 1em 1em 0 0;
-  line-height: 0.1em;
+  margin: 0 1em 0 0;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -126,6 +126,11 @@ body {
 
 .cursos__list {
   list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.cursos__list hr {
+  border-top: 5px solid #ca9b4d;
 }
 
 .cursos__item {
@@ -147,12 +152,8 @@ body {
 .cursos__box {
   margin: 1em;
   border: 0.06em solid #7d2a0c;
+  padding: 0 0 0.5em 0;
   border-radius: 0.5em;
-  height: 45vh;
-}
-
-.cursos__box:hover {
-  width: 90%;
 }
 
 .cursos__image {
@@ -166,18 +167,20 @@ body {
   margin-left: 0.5em;
   font-weight: bold;
 }
+.cursos__button {
+  display: block;
+  margin: auto;
+  width: 80%;
+  border: 1px solid #eaddb3;
+  background-color: #eaddb3;
+}
 
-.cursos__text {
-  font-size: 1rem;
-  font-style: italic;
-  margin-right: 0.5em;
-  text-align: right;
-  font-weight: bold;
-  color: #333;
+.cursos__button:hover {
+  background-color: #7c2806;
+  color: aliceblue;
+  transition: 2s;
 }
-.cursos__text:hover {
-  font-size: 0.9rem;
-}
+
 /* fin estilos cursos */
 
 /* estilos novedades */
@@ -238,7 +241,7 @@ body {
   width: 100%;
   margin: 0.5em;
   padding: 0.8em;
-  border: 0.1em solid #7d2a0c;
+  border: 1px solid #7d2a0c;
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
 }
@@ -272,7 +275,7 @@ body {
 }
 
 .box {
-  padding: 2em;
+  padding: 2em 0 2em 0;
 }
 
 .footer__list {
@@ -300,29 +303,40 @@ body {
 }
 
 .footer__libro {
-  height: 10em;
+  width: 18em;
+  margin: 1em 0 0 0;
+}
+.footer__libro:hover {
+  transform: translate(0px, 10px) scale(0.8);
+  transition: 2s;
 }
 .list {
   display: flex;
   flex-direction: row;
+  padding: 0;
 }
 .list__icon {
   background-color: #333;
   width: 3.125em;
   height: 3.125em;
-  margin-right: 1.5em;
-  margin-top: 3em;
+  margin: 3em 1.5em 0 0;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.list__icon:hover {
+  background-color: aliceblue;
+  transform: rotate(360deg);
+  transition: 2s;
+}
 .icon {
   color: white;
   font-size: 1.2rem;
 }
 .icon:hover {
-  color: #eaddb3;
+  color: #333;
+  transition: 1s;
 }
 /* fin estilos footer */
 @media (max-width: 991px) {
@@ -335,13 +349,18 @@ body {
   .navbar-light .navbar-toggler {
     border: 1px solid #7c2806;
   }
+  .producto__container {
+    flex-wrap: wrap;
+  }
   .cursos__list {
     padding: 0;
   }
-  .cursos__title {
+  .footer__libro {
+    width: 16em;
+    padding: 0 0 1em 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   /* modificaciones en pagina index */
   .hero {
     padding: 4em;
@@ -367,13 +386,11 @@ body {
   .cursos__list {
     display: flex;
     justify-content: space-around;
+    margin: 0;
   }
   .cursos__right {
     width: 100%;
     grid-template-columns: 1fr 1fr;
-  }
-  .cursos__box {
-    height: 50vh;
   }
   .cursos__image {
     width: 100%;
@@ -396,8 +413,10 @@ body {
     text-align: center;
   }
   .footer__libro {
-    width: 100%;
-    height: auto;
+    width: 14em;
+  }
+  .list__icon {
+    margin: 1em 0.5em 0 0.5em;
   }
 }
 
@@ -411,26 +430,29 @@ body {
     padding: 0 10px 0 10px;
   }
   /* fin de modificaciones en pagina index */
-  .cursos__box {
-    height: 37vh;
+  .cursos__list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cursos__list hr {
+    display: none;
   }
   .cursos__item {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
   .cursos__title {
-    font-size: 0.9rem;
-  }
-  .cursos__text {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 412px) {
-  .cursos__list {
-    flex-direction: column;
-    align-items: center;
+  .cursos__right {
+    grid-template-columns: 1fr;
   }
-  .cursos__box {
-    height: 35vh;
+  .producto {
+  }
+  .list__icon {
+    width: 2.5em;
+    height: 2.5em;
   }
 }
